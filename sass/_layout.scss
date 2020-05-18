@@ -1,0 +1,28 @@
+.container {
+  width: 80%;
+  margin: 6rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark);
+  border-radius: 4px;
+  min-height: 90vh;
+}
+
+.header {
+  height: 6rem;
+  background-color: white;
+  border-bottom: 1px solid var(--color-grey-light-2);
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 20%;
+}
+
+main {
+  background-color: white;
+  flex: 1;
+}
