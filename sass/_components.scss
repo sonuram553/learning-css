@@ -7,13 +7,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightcoral;
 
   &__input {
     width: 80%;
-    font-size: inherit;
+    font-size: 1.4rem;
     font-family: inherit;
     color: inherit;
+    letter-spacing: inherit;
     background-color: var(--color-grey-light-2);
     border: none;
     border-radius: 10rem;
@@ -26,6 +26,11 @@
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
+    }
+
+    &::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
     }
   }
 
@@ -45,26 +50,57 @@
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
   }
 }
 
 .user-nav {
+  align-self: stretch;
   display: flex;
 
+  > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    transition: all 0.13s ease-out;
+
+    &:hover {
+      transition: all 0.13s ease-in;
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
   &__icon-box {
+    position: relative;
   }
+
   &__icon {
-    height: 2.8rem;
-    //width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-2);
   }
+
   &__notification {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;;
+    font-size: 0.8rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  &__user {
-  }
+
   &__user-photo {
     height: 3.7rem;
     border-radius: 50%;
-  }
-  &__user-name {
+    margin-right: 1rem;
   }
 }
