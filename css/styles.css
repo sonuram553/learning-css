@@ -155,6 +155,14 @@ body {
   color: var(--color-grey-light-4); }
 
 /* Side-nav End */
+/* Gallery Start */
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+/* Gallery End */
 .container {
   width: 80%;
   margin: 6rem auto;
@@ -185,5 +193,4 @@ body {
 
 main {
   background-color: white;
-  background-color: lightcoral;
   flex: 1; }
