@@ -155,14 +155,6 @@ body {
   color: var(--color-grey-light-4); }
 
 /* Side-nav End */
-/* Gallery Start */
-.gallery {
-  display: flex; }
-  .gallery__photo {
-    width: 100%;
-    display: block; }
-
-/* Gallery End */
 .container {
   width: 80%;
   margin: 6rem auto;
@@ -194,3 +186,19 @@ body {
 main {
   background-color: white;
   flex: 1; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex;
+  justify-content: space-between; }
+  .overview__stars {
+    margin-right: auto; }
+  .overview__icon-star, .overview__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary); }
