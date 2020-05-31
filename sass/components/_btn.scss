@@ -1,0 +1,57 @@
+.btn {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: 2rem;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  width: 20rem;
+  height: 6rem;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  > * {
+    display: block;
+    text-align: center;
+    transition: all 0.12s ease-out;
+  }
+
+  &__hidden {
+    width: 100%;
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__hidden {
+    transition: all 0.12s ease-in;
+    top: 50%;
+  }
+
+  &:hover &__visible {
+    transition: all 0.12s ease-in;
+    opacity: 0;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+  }
+}
