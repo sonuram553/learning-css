@@ -301,3 +301,19 @@ main {
 
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
+
+.recommend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3); }
+  .recommend__photo {
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-sizing: content-box; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.15rem; }
+  .recommend__friends {
+    flex: 0 0 40%; }
