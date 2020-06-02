@@ -52,3 +52,9 @@
     font-family: sans-serif;
   }
 }
+
+@include respond(tab-port) {
+  .review {
+    margin-bottom: 2.5rem;
+  }
+}

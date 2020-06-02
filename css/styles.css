@@ -21,6 +21,9 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 1100px) {
+    html {
+      font-size: 52%; } }
 
 body {
   min-height: 100vh;
@@ -156,8 +159,27 @@ body {
   color: var(--color-grey-light-4); }
 
 /* Side-nav End */
+@media screen and (max-width: 900px) {
+  .legal {
+    display: none; }
+  .side-nav {
+    display: flex;
+    margin: 1rem 0; }
+    .side-nav__item {
+      flex: 1;
+      text-align: center; }
+      .side-nav__item:not(:last-child) {
+        margin: 0;
+        margin-right: 0.5rem; } }
+
+@media screen and (max-width: 600px) {
+  .side-nav__link:link, .side-nav__link:visited {
+    padding: 1.5rem 1.8rem; }
+  .side-nav__icon {
+    margin-right: 1rem; } }
+
 .container {
-  width: 80%;
+  max-width: 120rem;
   margin: 6rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: 0 4rem 10rem rgba(0, 0, 0, 0.4);
@@ -205,6 +227,25 @@ main {
   flex: 1; }
   .user-reviews .show-all-btn-box {
     text-align: center; }
+
+@media screen and (max-width: 900px) {
+  .container {
+    margin: 0 auto;
+    border-radius: 0;
+    width: 100%; }
+  .content {
+    flex-direction: column; }
+  .detail {
+    padding: 2rem; }
+  .description {
+    margin-right: 2rem; } }
+
+@media screen and (max-width: 600px) {
+  .detail {
+    flex-direction: column; }
+  .description {
+    margin-right: 0;
+    margin-bottom: 2rem; } }
 
 .gallery {
   display: flex; }
@@ -300,10 +341,18 @@ main {
       width: 1rem;
       height: 1rem;
       margin-right: 0.7rem;
-      background-color: var(--color-primary);
-      -webkit-mask-image: url(./../../img/chevron-thin-right.svg);
-      -webkit-mask-size: cover;
-      -webkit-mask-position: center; }
+      background-image: url(./../../img/chevron-thin-right.svg);
+      background-size: cover; }
+      @supports (mask-size: cover) or (-webkit-mask-size: cover) {
+        .list__item::before {
+          background-image: none;
+          background-color: var(--color-primary);
+          -webkit-mask-image: url(./../../img/chevron-thin-right.svg);
+          -webkit-mask-size: cover;
+          -webkit-mask-position: center;
+          mask-image: url(./../../img/chevron-thin-right.svg);
+          mask-size: cover;
+          mask-position: center; } }
 
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
@@ -362,6 +411,10 @@ main {
     top: -1rem;
     color: var(--color-grey-light-2);
     font-family: sans-serif; }
+
+@media screen and (max-width: 900px) {
+  .review {
+    margin-bottom: 2.5rem; } }
 
 .cta {
   padding: 3rem 0;

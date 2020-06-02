@@ -177,3 +177,36 @@
 
 /* Side-nav End */
 
+@include respond(tab-port) {
+  .legal {
+    display: none;
+  }
+
+  .side-nav {
+    display: flex;
+    margin: 1rem 0;
+
+    &__item {
+      flex: 1;
+      text-align: center;
+
+      &:not(:last-child) {
+        margin: 0;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .side-nav {
+    &__link:link,
+    &__link:visited {
+      padding: 1.5rem 1.8rem;
+    }
+
+    &__icon {
+      margin-right: 1rem;
+    }
+  }
+}

@@ -33,6 +33,10 @@ $shadow-light: 0 1rem 4rem
 html {
   //Makes 1rem = 10px
   font-size: 62.5%;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 52%;
+  }
 }
 
 body {

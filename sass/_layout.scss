@@ -1,5 +1,5 @@
 .container {
-  width: 80%;
+  max-width: 120rem;
   margin: 6rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: 0 4rem 10rem rgba(#000, 0.4);
@@ -20,7 +20,6 @@
 
 .content {
   display: flex;
-  //min-height: 80vh;
 }
 
 .sidebar {
@@ -57,5 +56,36 @@ main {
 
   .show-all-btn-box {
     text-align: center;
+  }
+}
+
+@include respond(tab-port) {
+  .container {
+    margin: 0 auto;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .detail {
+    padding: 2rem;
+  }
+
+  .description {
+    margin-right: 2rem;
+  }
+}
+
+@include respond(phone) {
+  .detail {
+    flex-direction: column;
+  }
+
+  .description {
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
 }
