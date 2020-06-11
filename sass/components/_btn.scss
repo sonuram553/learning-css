@@ -1,0 +1,21 @@
+.btn {
+  color: white;
+  border: none;
+  border-radius: 0;
+  background-color: $color-primary;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.4rem 2.5rem;
+  cursor: pointer;
+  transition: all 0.12s ease-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transition: all 0.12s ease-in;
+    background-color: $color-primary-dark;
+  }
+}
