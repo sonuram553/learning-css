@@ -61,7 +61,33 @@ body {
 
 .footer {
   background-color: #101d2c;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 7rem 5rem; }
+
+.nav {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  align-items: center; }
+  .nav__link {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    transition: all 0.12s ease-out; }
+    .nav__link:hover {
+      transition: all 0.12s ease-in;
+      background-color: rgba(255, 255, 255, 0.05); }
+
+.copyright {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.3rem;
+  margin-top: 3rem; }
 
 .header {
   background-color: #54483a;
