@@ -2,3 +2,42 @@
   background-color: $color-primary;
   grid-row: 1 / -1;
 }
+
+.nav-btn {
+  box-sizing: content-box;
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(to right, white, white);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding: 1.6rem 0;
+  margin: 2rem auto 0;
+  width: 60%;
+  height: 2px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background: white;
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}

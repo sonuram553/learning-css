@@ -34,6 +34,11 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  font-size: 4.3rem;
+  color: #f9f7f6;
+  line-height: 1; }
+
 .heading-2 {
   font-size: 3.8rem;
   font-style: italic;
@@ -58,6 +63,35 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-row: 1 / -1; }
+
+.nav-btn {
+  box-sizing: content-box;
+  position: relative;
+  display: block;
+  border: none;
+  background-color: transparent;
+  background-image: linear-gradient(to right, white, white);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding: 1.6rem 0;
+  margin: 2rem auto 0;
+  width: 60%;
+  height: 2px;
+  cursor: pointer; }
+  .nav-btn:focus {
+    outline: none; }
+  .nav-btn::before, .nav-btn::after {
+    content: "";
+    position: absolute;
+    background: white;
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 0; }
+  .nav-btn::before {
+    top: 0; }
+  .nav-btn::after {
+    bottom: 0; }
 
 .footer {
   background-color: #101d2c;
@@ -91,11 +125,66 @@ body {
 
 .header {
   background-color: #54483a;
-  grid-column: full-start / col-end 6; }
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url(../img/hero.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-column: full-start / col-end 6;
+  padding: 4rem 8rem;
+  display: grid;
+  gap: 1.5rem 0;
+  grid-template-rows: 1fr min-content 6rem 1fr; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__btn {
+    justify-self: start;
+    align-self: start; }
+  .header__seen-on-text {
+    color: #aaa;
+    display: grid;
+    gap: 0 1.6rem;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center; }
+    .header__seen-on-text::before, .header__seen-on-text::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: currentColor; }
+  .header__seen-on-logos {
+    display: grid;
+    gap: 3rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(18.4rem, 1fr));
+    justify-items: center; }
+    .header__seen-on-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 2rem;
+  display: grid;
+  align-content: center; }
+  .realtors__heading {
+    text-align: center;
+    margin-bottom: 3rem; }
+  .realtors__list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    align-items: center; }
+  .realtors__img {
+    display: block;
+    height: 6rem;
+    border-radius: 50%; }
+  .realtors__sold {
+    margin-top: -3px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #aaa; }
 
 .features {
   grid-column: center-start / center-end;
@@ -120,8 +209,7 @@ body {
     grid-column: 2 / 3; }
 
 .story__pictures {
-  background-color: #c69963;
-  background-image: url(../img/back.jpg);
+  background-image: linear-gradient(to right, rgba(198, 153, 99, 0.4), rgba(198, 153, 99, 0.4)), url(../img/back.jpg);
   grid-column: full-start / col-end 4;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
