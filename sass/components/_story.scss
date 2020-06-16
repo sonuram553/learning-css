@@ -11,6 +11,16 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
+
+    @include respond(tab-port) {
+      padding: 4rem;
+      grid-column: 1 / -1;
+      height: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 30rem;
+    }
   }
 
   &__image_1 {
@@ -19,6 +29,13 @@
     grid-column: 2 / 6;
     grid-row: 2 / 6;
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.2);
+
+    @include respond(tab-port) {
+      height: 100%;
+      object-fit: cover;
+      grid-column: 1 / 5;
+      grid-row: 1 / -1;
+    }
   }
 
   &__image_2 {
@@ -27,6 +44,16 @@
     grid-row: 4 / 6;
     z-index: 20;
     box-shadow: 0 2rem 5rem rgba($color: #000000, $alpha: 0.4);
+
+    @include respond(tab-port) {
+      width: 100%;
+      grid-row: 2 / 6;
+      align-self: center;
+    }
+
+    /*  @include respond(phone) {
+      grid-column: 1 / -1;
+    } */
   }
 
   &__content {
@@ -44,6 +71,10 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+    }
   }
 
   &__text {

@@ -17,6 +17,14 @@
     grid-template-columns: max-content max-content;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, max-content max-content);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: repeat(2, max-content);
+    }
   }
 
   &__img {
@@ -30,5 +38,11 @@
     text-transform: uppercase;
     font-size: 1.2rem;
     color: $color-grey-light-2;
+  }
+}
+
+@include respond(tab-port) {
+  .realtors {
+    grid-column: full-start / full-end;
   }
 }

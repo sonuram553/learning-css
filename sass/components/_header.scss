@@ -13,11 +13,15 @@
 
   display: grid;
   gap: 1.5rem 0;
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content max-content 1fr;
 
   &__logo {
     height: 3rem;
     justify-self: center;
+  }
+
+  &__heading-1 {
+    margin-bottom: 1.3rem;
   }
 
   &__btn {
@@ -38,7 +42,7 @@
       display: block;
       width: 100%;
       height: 1px;
-      background-color:  currentColor;
+      background-color: currentColor;
     }
   }
 
@@ -52,5 +56,17 @@
       height: 2.5rem;
       filter: brightness(70%);
     }
+  }
+}
+
+@include respond(tab-land) {
+  .header {
+    padding: 4rem;
+  }
+}
+
+@include respond(tab-port) {
+  .header {
+    grid-column: full-start / full-end;
   }
 }

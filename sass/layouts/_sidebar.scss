@@ -12,11 +12,16 @@
   background-image: linear-gradient(to right, white, white);
   background-repeat: no-repeat;
   background-origin: content-box;
-  padding: 1.6rem 0;
+  padding: 1.1rem 0;
   margin: 2rem auto 0;
   width: 60%;
   height: 2px;
   cursor: pointer;
+
+  @include respond(tab-port) {
+    width: 5rem;
+    margin: 2rem;
+  }
 
   &:focus {
     outline: none;
@@ -39,5 +44,12 @@
 
   &::after {
     bottom: 0;
+  }
+}
+
+@include respond(tab-port) {
+  .sidebar {
+    grid-row: 1 / span 1;
+    grid-column: 1 / -1;
   }
 }
