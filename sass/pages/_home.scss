@@ -1,0 +1,100 @@
+.section-about {
+  background-color: $color-gray-light-1;
+  padding: 22rem 0;
+  margin-top: -15vh;
+
+  @include respond(tab-port) {
+    padding: 18rem 0 32rem;
+  }
+}
+
+.section-features {
+  padding: 15rem 0;
+  margin-top: -9rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/nat-4.jpg);
+
+  background-size: cover;
+  transform: skewY(-5deg);
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+
+  > * {
+    transform: skewY(5deg);
+  }
+}
+
+.section-tours {
+  background-color: $color-gray-light-1;
+  padding: 22rem 0 12rem;
+  margin-top: -7rem;
+
+  @include respond(tab-port) {
+    padding: 17rem 0 8rem;
+  }
+}
+
+.section-stories {
+  position: relative;
+  padding: 10rem 0;
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+}
+
+.section-book {
+  padding: 12rem 0;
+  background: $greenGradient;
+
+  .submit-box {
+    margin-top: 4rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: cover;
+  //height: 40rem;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 3rem 10rem rgba($color: #000000, $alpha: 0.2);
+
+  &__form {
+    width: 50%;
+    padding: 4rem;
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 70%,
+        transparent 70%
+      ),
+      url(../img/nat-10.jpg);
+
+    &__form {
+      width: 80%;
+    }
+  }
+}
